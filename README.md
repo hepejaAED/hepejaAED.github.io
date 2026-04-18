@@ -6,7 +6,7 @@
   <title>Tu Nombre - Data Scientist</title>
 </head>
 <body>
-  <h1>Hi, I'm [Tu Nombre]</h1>
+  <h1>Hi, I'm [Tu eooooooooo]</h1>
   <p>Data Science | Machine Learning | Physics Background</p>
 
   <h2>Projects</h2>
