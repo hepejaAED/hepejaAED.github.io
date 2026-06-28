@@ -1,0 +1,159 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\input{glyphtounicode}
+
+% Font options
+% \usepackage[sfdefault]{roboto}  % Sans-serif font
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\setlength{\footskip}{4pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
+
+% Ensure PDF is machine readable
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+\vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.1in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge Javier Herrero Pérez} \\
+  \small tlf: 656181225 $|$ \href{mailto:jherrerop88@gmail.com}{jherrerop88@gmail.com} $|$ 
+  \href{https://www.linkedin.com/in/javier-herrero-p%C3%A9rez-ba672b271/}{www.linkedin.com/in/javier-herrero-pérez} $|$
+  \href{https://github.com/hepejaAED}{github.com/hepejaAED} $|$
+  \href{https://hepejaaed.github.io/}{hepejaaed.github.io}
+\end{center}
+
+\section{About me}
+% I hold a degree in Physics from the University of Salamanca, with a strong foundation in mathematical modelling, statistics and data analysis. I am currently pursuing a Master’s degree in Data Science at the University of Valencia and have gained hands-on experience in applied data science during an internship at the AIR Institute, working on real-world AI and data projects.
+% I have practical experience with Python, machine learning and natural language processing, and I am seeking junior roles in Data Science or related fields.
+I hold a degree in Physics from the University of Salamanca, with a strong foundation in mathematical modelling, statistics and data analysis. I am currently pursuing a Master’s degree in Data Science at the University of Valencia and have hands-on experience in applied AI, including machine learning and natural language processing, gained during an internship at the AIR Institute.
+
+I am particularly interested in Generative AI and LLM-based systems, and I am seeking junior Data Scientist roles where I can contribute to building and deploying data-driven solutions in real-world products.
+
+
+\section{Technical Skills}
+\resumeSubHeadingList
+    \resumeItem{\textbf{Programming}: Python, SQL, R, Fortran}
+  \resumeItem{\textbf{Data \& ML Libraries}: NumPy, Pandas, Scikit-learn}
+  \resumeItem{\textbf{Deep Learning Frameworks}: TensorFlow, PyTorch, Keras}
+  \resumeItem{\textbf{MLOps \& Tools}: Git, AWS, Jupyter Notebook, MongoDB, Cassandra, LaTeX}
+    \resumeItem{\textbf{Languages}: Spanish (native), English (B1+: Professional communication and technical proficiency)}
+\resumeSubHeadingListEnd
+
+
+\section{Experience}
+\resumeSubHeadingList
+
+\resumeSubheading
+    {Data Scientist | Internship}{Jul 2024 -- Aug 2024}
+    {AIR Institute (International Centre for Artificial Intelligence Research)}{Spain}
+    \resumeSubHeadingList
+        \resumeItem{\textbullet~\textbf{Workplace Risk Classification:} Took a real sensor dataset from scratch and put together a 6-class risk detection pipeline: feature engineering (temporal exposure, exponential decay weighting), SMOTE to handle a 27:1 imbalance, and a Random Forest that hit \textbf{100\% accuracy and macro F1 = 0.99} on a stratified 80/20 split. Used SHAP to explain the model and show that CO$_2$ and cumulative exposure time were the dominant drivers. Also trained an XGBoost regressor to predict CO$_2$ from environmental sensors, hitting \textbf{R$^2$ = 0.9999 and MAE = 27.74\,ppm} ($<$6\% error).}
+        \resumeItem{\textbullet~\textbf{Candidate Profiling (NLP):} Built a feature extraction pipeline with Whisper and PySentimiento to pull tone, emotion and linguistic signals from candidate interviews; the features fed a shortlisting classifier and measurably improved its precision and recall.}
+    \resumeSubHeadingListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingList
+
+% \resumeSubheading
+% {Multi-Agent System for Synchronous Energy Dispatch in Smart Grids}{Present}{}{}
+% \resumeSubHeadingList
+%     \resumeItem{{\small Developed a multi-agent framework using LangGraph to optimize synchronous power dispatch and grid stability under high renewable volatility (Python, TensorFlow, Transformers, statsmodels, LangGraph).}}
+% \resumeSubHeadingListEnd
+
+\resumeSubheading
+{Clickbait Detection in News Headlines}{}{}{}
+\resumeSubHeadingList
+    \resumeItem{{\small Developed an NLP model to detect clickbait using cosine similarity and topic modeling (Python, Scikit-learn, Transformers).}}
+\resumeSubHeadingListEnd
+
+\resumeSubheading
+{Calorie Estimation from Food Images}{}{}{}
+\resumeSubHeadingList
+    \resumeItem{{\small Built a deep learning pipeline to estimate calories from images using CNN models (Python, TensorFlow, Hugging Face).}}
+\resumeSubHeadingListEnd
+
+\resumeSubheading
+{Exploratory Analysis of Labour Market Data}{}{}{}
+\resumeSubHeadingList
+    \resumeItem{{\small Performed EDA on Spanish labour market data to identify gender inequality patterns (R, tidyverse, ggplot2).}}
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListEnd
+
+% \resumeSubheading
+%     {Causal Inference on Lalonde Dataset}{2025}
+%     {Causal Analysis Project}{Python, DoubleML, Scikit-learn}
+%     \resumeSubHeadingList
+%         \resumeItem{\textbullet\ Estimated treatment effects using causal inference techniques on observational data}
+%         \resumeItem{\textbullet\ Applied propensity score matching, class balancing, and meta-learners}
+%         \resumeItem{\textbullet\ Evaluated bias reduction and robustness of different causal models}
+%     \resumeSubHeadingListEnd
+
+\section{Education}
+\resumeSubHeadingList
+
+\resumeSubheading
+    {Master’s in Data Science}{Sept 2025 - Jun 2026 (expected)}
+    {University of Valencia}{Spain}
+    \resumeSubHeadingList
+        \resumeItem{\textbullet\ GPA: 8.86/10}
+    \resumeSubHeadingListEnd
+
+\resumeSubheading
+    {Bachelor’s Degree in Physics}{Sept 2021 - Jul 2025}
+    {University of Salamanca}{Spain}
+    \resumeSubHeadingList
+        \resumeItem{\textbullet\ GPA: 7.25/10}
+    \resumeSubHeadingListEnd
+
+
+\resumeSubHeadingListEnd
+
+
+
+\end{document}
