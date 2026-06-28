@@ -5,6 +5,8 @@
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{1565C0}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
@@ -37,7 +39,8 @@
 \setlength{\tabcolsep}{0in}
 
 % Section formatting
-\titleformat{\section}{\large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\large\bfseries\scshape\raggedright\color{accent}}{}{0em}{}[{\color{accent}\titlerule}]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
 
 % Ensure PDF is machine readable
 \pdfgentounicode=1
@@ -49,28 +52,30 @@
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{#3} & \textit{#4} \\
-  \end{tabular*}\vspace{-7pt}
+  \end{tabular*}\vspace{-4pt}
 }
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.1in, label={}]}
+\newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.1in, label={}, topsep=4pt, itemsep=6pt, parsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
 \begin{document}
 
 \begin{center}
-  \textbf{\Huge Javier Herrero Pérez} \\
-  \small tlf: 656181225 $|$ \href{mailto:jherrerop88@gmail.com}{jherrerop88@gmail.com} $|$ 
-  \href{https://www.linkedin.com/in/javier-herrero-p%C3%A9rez-ba672b271/}{www.linkedin.com/in/javier-herrero-pérez} $|$
-  \href{https://github.com/hepejaAED}{github.com/hepejaAED} $|$
-  \href{https://hepejaaed.github.io/}{hepejaaed.github.io}
+  {\color{accent}\textbf{\Huge Javier Herrero Pérez}} \\[5pt]
+  \small
+  656\,181\,225 \textcolor{accent}{$\cdot$}
+  \href{mailto:jherrerop88@gmail.com}{jherrerop88@gmail.com} \\[3pt]
+  \href{https://www.linkedin.com/in/javier-herrero-p\%C3\%A9rez-ba672b271/}{linkedin.com/in/javier-herrero-pérez}
+  \textcolor{accent}{$\cdot$}
+  \href{https://github.com/hepejaAED}{github.com/hepejaAED}
+  \textcolor{accent}{$\cdot$}
+  \textbf{\href{https://hepejaaed.github.io/}{hepejaaed.github.io}}
 \end{center}
 
 \section{About me}
 % I hold a degree in Physics from the University of Salamanca, with a strong foundation in mathematical modelling, statistics and data analysis. I am currently pursuing a Master’s degree in Data Science at the University of Valencia and have gained hands-on experience in applied data science during an internship at the AIR Institute, working on real-world AI and data projects.
 % I have practical experience with Python, machine learning and natural language processing, and I am seeking junior roles in Data Science or related fields.
-I hold a degree in Physics from the University of Salamanca, with a strong foundation in mathematical modelling, statistics and data analysis. I am currently pursuing a Master’s degree in Data Science at the University of Valencia and have hands-on experience in applied AI, including machine learning and natural language processing, gained during an internship at the AIR Institute.
-
-I am particularly interested in Generative AI and LLM-based systems, and I am seeking junior Data Scientist roles where I can contribute to building and deploying data-driven solutions in real-world products.
+I studied Physics because I liked understanding how things work at a fundamental level. That same curiosity pulled me into Data Science and, more recently, into AI agents and LLM systems. I'm currently in my Master's at the University of Valencia, looking for a junior role where I can keep building: ideally on products that use language models or agentic workflows. I have real experience shipping ML pipelines from an internship at AIR Institute, and I'm particularly interested in Generative AI and LLM-based systems.
 
 
 \section{Technical Skills}
@@ -108,7 +113,7 @@ I am particularly interested in Generative AI and LLM-based systems, and I am se
 \resumeSubheading
 {Clickbait Detection in News Headlines}{}{}{}
 \resumeSubHeadingList
-    \resumeItem{{\small Developed an NLP model to detect clickbait using cosine similarity and topic modeling (Python, Scikit-learn, Transformers).}}
+    \resumeItem{{\small Developed an NLP pipeline to detect clickbait using cosine similarity and topic modelling (Python, Scikit-learn, Transformers). Built a LangChain agent that autonomously scrapes news headlines and classifies them as clickbait or not in an end-to-end workflow.}}
 \resumeSubHeadingListEnd
 
 \resumeSubheading
