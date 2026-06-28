@@ -95,5 +95,51 @@ for (let i = 0; i < navigationLinks.length; i++) {
       }
     }
 
+    // re-observe newly visible elements after page switch
+    observeAnimatedElements();
+
   });
 }
+
+
+
+// typing animation for subtitle
+const subtitleEl = document.querySelector('.info-content .title');
+if (subtitleEl) {
+  const originalText = subtitleEl.textContent.trim();
+  subtitleEl.textContent = '';
+  subtitleEl.classList.add('typing-cursor');
+  let idx = 0;
+  const typeChar = () => {
+    if (idx < originalText.length) {
+      subtitleEl.textContent += originalText[idx++];
+      setTimeout(typeChar, 70);
+    } else {
+      subtitleEl.classList.remove('typing-cursor');
+    }
+  };
+  setTimeout(typeChar, 500);
+}
+
+
+
+// scroll-triggered entrance animations
+const scrollObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      scrollObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+function observeAnimatedElements() {
+  document.querySelectorAll('.timeline-item, .skill-chip, .project-item.active').forEach(el => {
+    if (!el.classList.contains('visible')) {
+      el.classList.add('animate-on-scroll');
+      scrollObserver.observe(el);
+    }
+  });
+}
+
+observeAnimatedElements();
